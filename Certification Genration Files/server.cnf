@@ -1,0 +1,14 @@
+[req]
+distinguished_name = dn
+prompt = no
+req_extensions = v3_req
+
+[dn]
+CN = {DOMAIN_NAME}
+
+[v3_req]
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = {DOMAIN_NAME}
+IP.1  = {IP_ADDRESS}
