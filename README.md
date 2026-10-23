@@ -3,6 +3,7 @@
 A command line script that uses the compromised certificate values from the "eMudhra's incident" to create new certificates that have valid chain of trust.
 
 ![Random Number](https://imgs.xkcd.com/comics/random_number.png)
+[LowByte: The eMudhra Single-Byte CA Key Compromise](https://nelson-dayan.ghost.io/lowbyte-the-emudhra-single-byte-ca-key-compromise/)
 
 ## Requirements
   
