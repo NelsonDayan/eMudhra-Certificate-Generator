@@ -2,7 +2,7 @@
 
 
 
-`![Random Number (xkcd #221)](https://imgs.xkcd.com/comics/random_number.png)`
+`![Random Number](https://imgs.xkcd.com/comics/random_number.png)`
 
 
 A command line script that uses the compramised certificate values from eMudhra's incident to create new certificates that have valid chain of trust.
