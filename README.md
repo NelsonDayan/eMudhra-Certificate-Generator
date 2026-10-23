@@ -1,6 +1,6 @@
 # eMudhra Certificate Generator
 
-A command line script that uses the compramised certificate values from eMudhra's incident to create new certificates that have valid chain of trust.
+A command line script that uses the compromised certificate values from the "eMudhra's incident" to create new certificates that have valid chain of trust.
 
 ![Random Number](https://imgs.xkcd.com/comics/random_number.png)
 
