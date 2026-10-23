@@ -26,23 +26,14 @@ A command line script that uses the compramised certificate values from eMudhra'
 eMudhra Generator/
 
 ├── generate_cert.py
-
 ├── Certification Genration Files/
-
 │   ├── server.cnf                  # template (uses {DOMAIN_NAME}, {IP_ADDRESS})
-
 │   └── server.ext                  # template (uses {DOMAIN_NAME}, {IP_ADDRESS})
-
 ├── Private Keys/
-
 │   └── CN=EM DV TLS CA - G3B,O=eMudhra BV,C=NL.key
-
 ├── Public Certificates/
-
 │   └── CN=EM DV TLS CA - G3B,O=eMudhra BV,C=NL.pem
-
 └── Intermidiate Certificates/
-
     └── CN=EM DV TLS CA - G3B,O=eMudhra BV,C=NL.intermidiate
 
 ```
@@ -58,21 +49,14 @@ eMudhra Generator/
 python generate_cert.py <ip> <domain> <validation_level> <generation>
 
 ```
-
   
 
 | Argument | Description | Allowed values |
-
 |---|---|---|
-
 | `ip` | IP address for the certificate | Any valid IPv4 or IPv6 address |
-
 | `domain` | Domain name | A valid domain, wildcards allowed (`*.example.com`) |
-
 | `validation_level` | Validation level | `DV`, `OV`, `EV` (case-insensitive) |
-
 | `generation` | Issuer generation / batch label | `G3B`, `G3C` (case-insensitive) |
-
   
 
 Example:
@@ -128,17 +112,11 @@ Everything is written to the generated folder:
   
 
 | File | Contents |
-
 |---|---|
-
 | `{domain}-{ip}-{level}-{generation}.crt` | Server certificate followed by the intermediate certificate |
-
 | `server.key` | Private key for the certificate (not encrypted) |
-
 | `server.csr` | Certificate signing request |
-
 | `server.cnf`, `server.ext` | Filled-in configuration files |
-
 | `server.srl` | Serial number file used for this run |
 
   
@@ -156,11 +134,8 @@ The CA name is built from the arguments, for example `DV` + `G3B` gives `CN=EM D
   
 
 | Generation | Issuer part of the name |
-
 |---|---|
-
 | `G3B` | `O=eMudhra BV,C=NL` |
-
 | `G3C` | `O=eMudhra Inc,C=US` |
 
   
@@ -204,19 +179,12 @@ If a file is missing, the script stops and prints the exact path it expected.
   
 
 | Message | Cause |
-
 |---|---|
-
 | `... is not a valid IP address` / `... is not a valid domain name` | An argument failed validation |
-
 | `invalid choice ... (choose from ...)` | Validation level or generation is not one of the allowed values |
-
 | `temporary folder already exists` | A folder with the same name is already there |
-
 | `CA file not found` / `intermediate certificate not found` | A CA file is missing or named differently than expected |
-
 | `openssl was not found on PATH` | OpenSSL is not installed or not on your `PATH` |
-
 | `command failed (exit N)` | An `openssl` command failed; the message includes OpenSSL's own error output |
 
   
